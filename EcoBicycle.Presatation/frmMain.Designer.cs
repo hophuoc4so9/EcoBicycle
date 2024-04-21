@@ -67,7 +67,7 @@
             this.barButtonItem9,
             this.barButtonItem10});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
             this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 742;
@@ -75,13 +75,13 @@
             this.ribbonPageCategory1});
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1122, 219);
+            this.ribbonControl1.Size = new System.Drawing.Size(1253, 219);
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.Caption = "Đăng nhập";
             this.btnDangNhap.Id = 1;
-            this.btnDangNhap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnDangNhap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.LargeImage")));
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangNhap_ItemClick);
             // 
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 450);
+            this.ClientSize = new System.Drawing.Size(1253, 450);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "frmMain";
             this.Text = "frmMainUser";

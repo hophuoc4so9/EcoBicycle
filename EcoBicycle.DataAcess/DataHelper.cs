@@ -20,7 +20,7 @@ namespace EcoBicycle.DataAccess
         {
             try
             {//                              ten sever              tendb
-                ChuoiKetNoi = "Data Source=     ;Initial Catalog=     ;Integrated Security=True;Encrypt=True";
+                ChuoiKetNoi = "Data Source=laptop-jgc12l0k;Initial Catalog=xedap;Integrated Security=True";
                 con = new SqlConnection(ChuoiKetNoi);
             }
             catch { }

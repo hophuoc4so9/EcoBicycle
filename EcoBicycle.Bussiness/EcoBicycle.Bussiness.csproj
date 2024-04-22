@@ -53,8 +53,10 @@
     <Compile Include="CtrChiNhanh.cs" />
     <Compile Include="CtrDangNhap.cs" />
     <Compile Include="ctrDataHelper.cs" />
+    <Compile Include="ctrHoanTraThe.cs" />
     <Compile Include="infoLoginKH.cs" />
     <Compile Include="infoLoginNV.cs" />
+    <Compile Include="infoMayBanThe.cs" />
     <Compile Include="LoginInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

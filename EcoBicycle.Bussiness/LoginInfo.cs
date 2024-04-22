@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EcoBicycle.Bussiness
 {
-    internal class LoginInfo
+    public class LoginInfo
     {
     }
 }

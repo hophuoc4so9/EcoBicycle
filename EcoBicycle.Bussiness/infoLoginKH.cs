@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace EcoBicycle.Bussiness
 {
-    class infoLoginKH
+    public class infoLoginKH
     {
-   
-        string HoTen;
-        bool GioiTinh;
-        string SDT;
-        int MaThe=-1;
-        int MatKhau;
-        string MaNganHang;
-        string TenNganHang;
-       int SoDu ;
-        int MaloaiThe;
+
+        public static string HoTen;
+        public static bool GioiTinh;
+        public static string SDT;
+        public static int MaThe;
+        public static int MatKhau;
+        public static string MaNganHang;
+        public static string TenNganHang;
+        public static int SoDu;
+        public static int MaloaiThe;
+
+
+
+
     }
 }

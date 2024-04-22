@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace EcoBicycle.Bussiness
 {
-    class infoLoginNV
+    public class infoLoginNV
     {
-        int MaNV = -1;
-        string HoTen;
-        bool GioiTinh;
-        DateTime NgaySinh;
-        string SDT;
-        string DiaChi;
-        string LoaiNV;
-        double Luong;
-        string username;
-        string pass;
+        public static int MaNV = -1;
+        public static string HoTen;
+        public static bool GioiTinh;
+        public static DateTime NgaySinh;
+        public static string SDT;
+        public static string DiaChi;
+        public static string LoaiNV;
+        public static double Luong;
+        public static string username;
+        public static string pass;
     }
 }

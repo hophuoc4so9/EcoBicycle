@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace EcoBicycle.DataAccess
 {
-     class DataHelper
+     public class DataHelper
     {       
         private static DataHelper dt = null;
         DataSet ds = new DataSet();
@@ -20,7 +20,7 @@ namespace EcoBicycle.DataAccess
         {
             try
             {//                              ten sever              tendb
-                ChuoiKetNoi = "Data Source=laptop-jgc12l0k;Initial Catalog=xedap;Integrated Security=True";
+                ChuoiKetNoi = "Data Source=101-4;Initial Catalog=xedap;Integrated Security=True";
                 con = new SqlConnection(ChuoiKetNoi);
             }
             catch { }

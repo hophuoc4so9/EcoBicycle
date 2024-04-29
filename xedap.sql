@@ -28,26 +28,29 @@ MaNganHang nvarchar(100),
 TenNganHang nvarchar(100),
 SoDu Money,
 MaloaiThe int foreign key (MaloaiThe) references LoaiThe(MaloaiThe),
-)
-go
-insert into TheXE values(0,111111,null,null,100000000,1)
-insert into TheXE values(1,111111,null,null,100000000,1)
-insert into TheXE values(2,111111,null,null,100000000,1)
-insert into TheXE values(3,111111,null,null,100000000,1)
-go
-create table NguoiDung
-(
-MaKh int primary key,
 HoTen nvarchar(50),
 GioiTinh bit,
-SDT varchar(10),
-MaThe int foreign key (MaThe) references TheXe(MaThe)
+SDT varchar(10)
 )
 go
-insert into NguoiDung values(1,N'Phước',1,'0349146401',0)
-insert into NguoiDung values(2,N'Phước',1,'0349146401',0)
-insert into NguoiDung values(3,N'Phước',1,'0349146401',0)
-insert into NguoiDung values(4,N'Phước',1,'0349146401',0)
+insert into TheXE values(0,111111,null,null,100000000,1,N'Phước',1,'0349146401')
+insert into TheXE values(1,111111,null,null,100000000,1,N'Phước',1,'0349146401')
+insert into TheXE values(2,111111,null,null,100000000,1,N'Phước',1,'0349146401')
+insert into TheXE values(3,111111,null,null,100000000,1,N'Phước',1,'0349146401')
+go
+/*create table NguoiDung
+(
+--MaKh int primary key,
+
+MaThe int foreign key (MaThe) references TheXe(MaThe),
+primary key(MaThe)
+)
+
+go
+insert into NguoiDung values(N'Phước',1,'0349146401',0)
+insert into NguoiDung values(N'Phước',1,'0349146401',1)
+insert into NguoiDung values(N'Phước',1,'0349146401',2)
+insert into NguoiDung values(N'Phước',1,'0349146401',3)*/
 go
 go
 create table LoaiXe
@@ -92,9 +95,9 @@ insert into Xe values(3,0,0)
 go
 create table ChiTietMuonxe
 (
-MaKh int foreign key (makh) references NguoiDung(makh),
+MaThe int foreign key (MaThe) references TheXE(MaThe),
 MaXe int   foreign key (maxe) references xe(maxe),
-primary key(makh,maxe),
+primary key(MaThe,maxe),
 ThoiGianBatDau date,
 ThoiGianKetThuc date,
 DonGia money,
@@ -131,10 +134,12 @@ SDT varchar(10),
 DiaChi nvarchar(100),
 LoaiNV nvarchar(20),
 Luong money,
+username varchar(100)not null unique,
+pass varchar(100) not null,
 --MaCN  varchar(10) foreign key (macn) references ChiNhanh(macn)
 )
 go
-insert into NhanVien(HoTen,GioiTinh,NgaySinh,SDT,DiaChi,LoaiNV,Luong) values(N'Hồ Tuán Phước',0,null,null,null,1,10000)
+insert into NhanVien(HoTen,GioiTinh,NgaySinh,SDT,DiaChi,LoaiNV,Luong,username,pass) values(N'Hồ Tuán Phước',0,null,null,null,1,10000,'admin','123')
 go
 create table ThietBiMuonXe
 (

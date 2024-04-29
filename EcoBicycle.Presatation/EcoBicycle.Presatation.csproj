@@ -62,11 +62,23 @@
     <Compile Include="FrmDangNhap.Designer.cs">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHoanTraThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoanTraThe.Designer.cs">
+      <DependentUpon>frmHoanTraThe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNapTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNapTien.Designer.cs">
+      <DependentUpon>frmNapTien.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmQLChiNhanh.cs">
       <SubType>Form</SubType>
@@ -97,8 +109,14 @@
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHoanTraThe.resx">
+      <DependentUpon>frmHoanTraThe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNapTien.resx">
+      <DependentUpon>frmNapTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLChiNhanh.resx">
       <DependentUpon>FrmQLChiNhanh.cs</DependentUpon>

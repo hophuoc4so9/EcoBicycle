@@ -128,6 +128,98 @@ namespace EcoBicycle.DataAccess
                 }
             }
         }
+        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        {
+            DataTable data = new DataTable();
+
+            
+
+                SqlCommand command = new SqlCommand(query, con);
+
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(' ');
+                int i = 0;
+                foreach (string item in listPara)
+                {
+                    if (item.Contains('@'))
+                    {
+                        command.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(data);
+
+                
+            
+
+            return data;
+        }
+
+        public int ExecuteNonQuery(string query, object[] parameter = null)
+        {
+            int data = 0;
+
+            
+               
+
+                SqlCommand command = new SqlCommand(query, con);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteNonQuery();
+
+              
+
+            return data;
+        }
+
+        public object ExecuteScalar(string query, object[] parameter = null)
+        {
+            object data = 0;
+
+            
+           
+
+                SqlCommand command = new SqlCommand(query, con);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteScalar();
+
+            
+
+            return data;
+        }
+
     }
 }
 

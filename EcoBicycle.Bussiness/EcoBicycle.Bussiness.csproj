@@ -51,8 +51,7 @@
   <ItemGroup>
     <Compile Include="CtrChiNhanh.cs" />
     <Compile Include="CtrDangNhap.cs" />
-    <Compile Include="ctrDataHelper.cs" />
-    <Compile Include="LoginInfo.cs" />
+    <Compile Include="LoginInfoKH.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

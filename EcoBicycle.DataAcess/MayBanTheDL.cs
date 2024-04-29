@@ -12,7 +12,7 @@ namespace EcoBicycle.DataAcess
         DataTable MayBanThe;
         DataHelper dt = DataHelper.GetInstance();
 
-        public MayBanThe()
+        public MayBanTheDL()
         {
             MayBanThe = dt.FillDataTable("select * from TheXE");
         }

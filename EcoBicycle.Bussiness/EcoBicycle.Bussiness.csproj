@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,8 +52,11 @@
   <ItemGroup>
     <Compile Include="CtrChiNhanh.cs" />
     <Compile Include="CtrDangNhap.cs" />
-    <Compile Include="ctrDataHelper.cs" />
-    <Compile Include="LoginInfo.cs" />
+    <Compile Include="ctrHoanTraThe.cs" />
+    <Compile Include="infoLoginKH.cs" />
+    <Compile Include="infoLoginNV.cs" />
+    <Compile Include="infoMayBanThe.cs" />
+    <Compile Include="LoginInfoKH.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -62,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

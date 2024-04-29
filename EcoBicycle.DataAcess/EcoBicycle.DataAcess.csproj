@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,8 +45,10 @@
     <Compile Include="ChiNhanhDL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DataHelper.cs" />
+    <Compile Include="MayBanTheDL.cs" />
     <Compile Include="NhanvienDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheXeDL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

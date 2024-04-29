@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace EcoBicycle.DataAccess
 {
-     class DataHelper
+     public class DataHelper
     {       
         private static DataHelper dt = null;
         DataSet ds = new DataSet();
@@ -20,7 +20,7 @@ namespace EcoBicycle.DataAccess
         {
             try
             {//                              ten sever              tendb
-                ChuoiKetNoi = "Data Source=laptop-jgc12l0k;Initial Catalog=xedap;Integrated Security=True";
+                ChuoiKetNoi = "Data Source=101-4;Initial Catalog=xedap;Integrated Security=True";
                 con = new SqlConnection(ChuoiKetNoi);
             }
             catch { }
@@ -128,6 +128,98 @@ namespace EcoBicycle.DataAccess
                 }
             }
         }
+        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        {
+            DataTable data = new DataTable();
+
+            
+
+                SqlCommand command = new SqlCommand(query, con);
+
+            if (parameter != null)
+            {
+                string[] listPara = query.Split(' ');
+                int i = 0;
+                foreach (string item in listPara)
+                {
+                    if (item.Contains('@'))
+                    {
+                        command.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(data);
+
+                
+            
+
+            return data;
+        }
+
+        public int ExecuteNonQuery(string query, object[] parameter = null)
+        {
+            int data = 0;
+
+            
+               
+
+                SqlCommand command = new SqlCommand(query, con);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteNonQuery();
+
+              
+
+            return data;
+        }
+
+        public object ExecuteScalar(string query, object[] parameter = null)
+        {
+            object data = 0;
+
+            
+           
+
+                SqlCommand command = new SqlCommand(query, con);
+
+                if (parameter != null)
+                {
+                    string[] listPara = query.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+
+                data = command.ExecuteScalar();
+
+            
+
+            return data;
+        }
+
     }
 }
 

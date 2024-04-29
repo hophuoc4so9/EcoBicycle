@@ -65,7 +65,7 @@ namespace EcoBicycle.Presatation
             // 
             this.txtChiNhanh.Location = new System.Drawing.Point(283, 30);
             this.txtChiNhanh.Name = "txtChiNhanh";
-            this.txtChiNhanh.Size = new System.Drawing.Size(249, 26);
+            this.txtChiNhanh.Size = new System.Drawing.Size(249, 29);
             this.txtChiNhanh.TabIndex = 6;
             // 
             // errorProvider1
@@ -115,9 +115,9 @@ namespace EcoBicycle.Presatation
             // btnthem
             // 
             this.btnthem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.ImageOptions.Image")));
-            this.btnthem.Location = new System.Drawing.Point(126, 198);
+            this.btnthem.Location = new System.Drawing.Point(161, 182);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(212, 55);
+            this.btnthem.Size = new System.Drawing.Size(260, 68);
             this.btnthem.TabIndex = 8;
             this.btnthem.Text = "Thêm";
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
@@ -125,9 +125,9 @@ namespace EcoBicycle.Presatation
             // btnxoa
             // 
             this.btnxoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.ImageOptions.Image")));
-            this.btnxoa.Location = new System.Drawing.Point(508, 198);
+            this.btnxoa.Location = new System.Drawing.Point(509, 182);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(212, 55);
+            this.btnxoa.Size = new System.Drawing.Size(260, 68);
             this.btnxoa.TabIndex = 9;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
@@ -135,9 +135,9 @@ namespace EcoBicycle.Presatation
             // btnSua
             // 
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(901, 198);
+            this.btnSua.Location = new System.Drawing.Point(898, 182);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(212, 55);
+            this.btnSua.Size = new System.Drawing.Size(260, 68);
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -171,9 +171,9 @@ namespace EcoBicycle.Presatation
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(141, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 20);
+            this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Tên chi nhánh";
+            this.label3.Text = "Địa chỉ";
             // 
             // errorProvider2
             // 

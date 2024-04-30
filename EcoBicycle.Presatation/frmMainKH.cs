@@ -34,7 +34,9 @@ namespace EcoBicycle.Presatation
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var f = new frmDangKy();
+            f.Show();
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)

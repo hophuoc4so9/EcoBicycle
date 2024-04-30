@@ -49,5 +49,24 @@ namespace EcoBicycle.DataAcess
             }
 
         }
+        public Boolean DangkyThe(string MaThe, DataRow dr)
+        {
+            try
+            {
+                String dk = "MaThe = '" + MaThe + "'";
+
+                dt.UpdateRowTableDungThuTuCot(TheXE, dk, dr);
+
+                dt.UpdateFromDataTableToDataBase("TheXE", TheXE);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+
     }
 }

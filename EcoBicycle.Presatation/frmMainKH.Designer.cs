@@ -42,6 +42,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -59,6 +62,7 @@
             // 
             // btnNapTien
             // 
+            this.btnNapTien.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnNapTien.BackColor = System.Drawing.Color.SeaGreen;
             this.btnNapTien.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNapTien.Location = new System.Drawing.Point(0, 329);
@@ -70,6 +74,7 @@
             // 
             // btnXemThongTin
             // 
+            this.btnXemThongTin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnXemThongTin.BackColor = System.Drawing.Color.SeaGreen;
             this.btnXemThongTin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnXemThongTin.Location = new System.Drawing.Point(712, 193);
@@ -81,6 +86,7 @@
             // 
             // btnHoanTraThe
             // 
+            this.btnHoanTraThe.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnHoanTraThe.BackColor = System.Drawing.Color.SeaGreen;
             this.btnHoanTraThe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnHoanTraThe.Location = new System.Drawing.Point(3, 193);
@@ -92,6 +98,7 @@
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnDangNhap.BackColor = System.Drawing.Color.SeaGreen;
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDangNhap.Location = new System.Drawing.Point(715, 62);
@@ -104,6 +111,7 @@
             // 
             // btnDangKy
             // 
+            this.btnDangKy.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnDangKy.BackColor = System.Drawing.Color.SeaGreen;
             this.btnDangKy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDangKy.Location = new System.Drawing.Point(0, 62);
@@ -117,7 +125,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(844, 0);
+            this.comboBox1.Location = new System.Drawing.Point(862, 0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 1;
@@ -126,7 +134,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(774, 3);
+            this.label1.Location = new System.Drawing.Point(788, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 6;

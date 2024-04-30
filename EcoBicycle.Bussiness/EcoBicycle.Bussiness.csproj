@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CtrChiNhanh.cs" />
+    <Compile Include="ctrDangKy.cs" />
     <Compile Include="CtrDangNhap.cs" />
     <Compile Include="ctrHoanTraThe.cs" />
     <Compile Include="ctrMainKH.cs" />

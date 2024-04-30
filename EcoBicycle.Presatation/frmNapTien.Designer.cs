@@ -28,33 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.xtraScrollableControl1 = new DevExpress.XtraEditors.XtraScrollableControl();
             this.SuspendLayout();
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(214, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 32);
-            this.comboBox1.TabIndex = 0;
-            // 
             // xtraScrollableControl1
             // 
-            this.xtraScrollableControl1.Location = new System.Drawing.Point(738, 66);
-            this.xtraScrollableControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xtraScrollableControl1.Location = new System.Drawing.Point(604, 55);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(75, 23);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(61, 19);
             this.xtraScrollableControl1.TabIndex = 1;
             // 
             // frmNapTien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(655, 375);
             this.Controls.Add(this.xtraScrollableControl1);
-            this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmNapTien";
             this.Text = "Nạp tiền";
             this.ResumeLayout(false);
@@ -62,8 +52,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
         private DevExpress.XtraEditors.XtraScrollableControl xtraScrollableControl1;
     }
 }

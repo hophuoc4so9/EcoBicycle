@@ -23,8 +23,11 @@ namespace EcoBicycle.DataAcess
         }
         public DataRow[] TimTheXE(string MaThe, string MatKhau)
         {
-            string dk = "MaThe = '" + MatKhau + "' And MatKhaus = '" + MatKhau + "'";
+            string dk = "MaThe = " + MaThe + " And MatKhau = " + MatKhau + " AND MaloaiThe  <> 0";
+           
             DataRow[] nv = TheXE.Select(dk);
+         
+  
             return nv;
 
         }

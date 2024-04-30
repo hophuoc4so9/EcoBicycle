@@ -32,6 +32,7 @@ HoTen nvarchar(50),
 GioiTinh bit,
 SDT varchar(10)
 )
+se
 go
 insert into TheXE values(0,111111,null,null,100000000,1,N'Phước',1,'0349146401')
 insert into TheXE values(1,111111,null,null,100000000,1,N'Phước',1,'0349146401')

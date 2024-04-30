@@ -12,7 +12,7 @@ namespace EcoBicycle.DataAccess
         DataHelper dt = DataHelper.GetInstance();
         public NhanvienDL()
         {
-            nhanvien = dt.FillDataTable("select * from Nhanvien");
+            nhanvien = dt.FillDataTable("select * from NhanVien");
         }
         public DataTable LayNhanvien()
         {
@@ -20,7 +20,7 @@ namespace EcoBicycle.DataAccess
         }
         public DataRow[] TimNhanVien(string username, string password)
         {
-            string dk = "username = '" + username + "' And password = '" + password+ "'" ;
+            string dk = "username = '" + username + "' And pass  = '" + password+ "'" ;
             DataRow[] nv = nhanvien.Select(dk );
             return nv;
 

@@ -53,6 +53,7 @@
     <Compile Include="CtrChiNhanh.cs" />
     <Compile Include="CtrDangNhap.cs" />
     <Compile Include="ctrHoanTraThe.cs" />
+    <Compile Include="ctrMainKH.cs" />
     <Compile Include="infoLoginKH.cs" />
     <Compile Include="infoLoginNV.cs" />
     <Compile Include="infoMayBanThe.cs" />

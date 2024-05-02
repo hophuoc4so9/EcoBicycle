@@ -13,6 +13,7 @@ namespace EcoBicycle.Presatation
 {
     public partial class FrmDangNhap : Form
     {   CtrDangNhap ctr= new CtrDangNhap(); 
+        public static int trangthai=0;
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -30,6 +31,12 @@ namespace EcoBicycle.Presatation
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+            if(trangthai==0)
+            {
+                var f = new frmMainKH();
+                f.ShowDialog();
+            }    
+                
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

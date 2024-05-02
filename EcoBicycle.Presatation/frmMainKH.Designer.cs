@@ -83,6 +83,7 @@
             this.btnXemThongTin.TabIndex = 4;
             this.btnXemThongTin.Text = "Xem thông tin thẻ";
             this.btnXemThongTin.UseVisualStyleBackColor = false;
+            this.btnXemThongTin.Click += new System.EventHandler(this.btnXemThongTin_Click);
             // 
             // btnHoanTraThe
             // 
@@ -95,6 +96,7 @@
             this.btnHoanTraThe.TabIndex = 3;
             this.btnHoanTraThe.Text = "Hoàn trả thẻ";
             this.btnHoanTraThe.UseVisualStyleBackColor = false;
+            this.btnHoanTraThe.Click += new System.EventHandler(this.btnHoanTraThe_Click);
             // 
             // btnDangNhap
             // 
@@ -125,16 +127,17 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(862, 0);
+            this.comboBox1.Location = new System.Drawing.Point(85, -1);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(788, 3);
+            this.label1.Location = new System.Drawing.Point(11, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 6;
@@ -152,6 +155,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "frmMainKH";
             this.Text = "frmMainKH";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainKH_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

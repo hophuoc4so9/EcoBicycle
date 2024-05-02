@@ -18,5 +18,6 @@ namespace EcoBicycle.Bussiness
         public static double Luong;
         public static string username;
         public static string pass;
+        
     }
 }

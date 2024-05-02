@@ -20,7 +20,22 @@ namespace EcoBicycle.Bussiness
         public static double SoDu = 0;
         public static int MaloaiThe = -1;
 
-
+        public static double getSoDu()
+        {
+            return SoDu;
+        }
+        public static void clear()
+        {
+         HoTen = "";
+         GioiTinh = true;
+         SDT = "";
+        MaThe = -1;
+         MatKhau = -1;
+         MaNganHang = "";
+         TenNganHang = "";
+        SoDu = 0;
+         MaloaiThe = -1;
+        }
 
 
     }

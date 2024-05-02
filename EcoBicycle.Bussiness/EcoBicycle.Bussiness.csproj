@@ -58,7 +58,6 @@
     <Compile Include="infoLoginKH.cs" />
     <Compile Include="infoLoginNV.cs" />
     <Compile Include="infoMayBanThe.cs" />
-    <Compile Include="LoginInfoKH.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

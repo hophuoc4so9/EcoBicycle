@@ -49,15 +49,43 @@ namespace EcoBicycle.DataAcess
             }
 
         }
-        public Boolean DangkyThe(string MaThe, DataRow dr)
+        public Boolean DangkyThe(int MaMay, DataRow dr)
         {
             try
             {
-                String dk = "MaThe = '" + MaThe + "'";
-
-                dt.UpdateRowTableDungThuTuCot(TheXE, dk, dr);
+                DataTable ChiTietTheXeMayBan = dt.FillDataTable("select * from ChiTietTheXeMayBan ");
+                DataRow dr1 = dt.FillDataTable("select top (1) * from ChiTietTheXeMayBan where mamay=" + MaMay).Rows[0];
+                int mathe = int.Parse(dr1["MaThe"].ToString()) ;
+                String dk = "MaThe = '" + mathe + "'";
+                dr["MaThe"] = mathe;
+                dt.UpdateRowTableDungThuTuCot(TheXE, dk, dr.ItemArray);
 
                 dt.UpdateFromDataTableToDataBase("TheXE", TheXE);
+
+                dt.DeleteRowTable(ChiTietTheXeMayBan, "MaMay = " + MaMay + " and Mathe =" + mathe  );
+                dt.UpdateFromDataTableToDataBase("ChiTietTheXeMayBan", ChiTietTheXeMayBan);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+        public Boolean thayDoiThongTin(int MaThe, DataRow dr)
+        {
+            try
+            {
+               
+                String dk = "MaThe = '" + MaThe + "'";
+               
+                dt.UpdateRowTableDungThuTuCot(TheXE, dk, dr.ItemArray);
+
+                dt.UpdateFromDataTableToDataBase("TheXE", TheXE);
+
+                
+
 
                 return true;
             }

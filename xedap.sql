@@ -30,14 +30,22 @@ SoDu Money,
 MaloaiThe int foreign key (MaloaiThe) references LoaiThe(MaloaiThe),
 HoTen nvarchar(50),
 GioiTinh bit,
-SDT varchar(10)
+SDT varchar(11)
 )
-se
+
 go
+
 insert into TheXE values(0,111111,null,null,100000000,1,N'Phước',1,'0349146401')
 insert into TheXE values(1,111111,null,null,100000000,1,N'Phước',1,'0349146401')
 insert into TheXE values(2,111111,null,null,100000000,1,N'Phước',1,'0349146401')
 insert into TheXE values(3,111111,null,null,100000000,1,N'Phước',1,'0349146401')
+insert into TheXE values(4,111111,null,null,null,0,null,null,null)
+insert into TheXE values(6,111111,null,null,null,0,null,null,null)
+insert into TheXE values(7,111111,null,null,null,0,null,null,null)
+insert into TheXE values(8,111111,null,null,null,0,null,null,null)
+insert into TheXE values(9,111111,null,null,null,0,null,null,null)
+insert into TheXE values(5,111111,null,null,null,0,null,null,null)
+
 go
 /*create table NguoiDung
 (
@@ -124,6 +132,23 @@ MaCN varchar(10) foreign key (macn) references ChiNhanh(macn)
 )
 go
 insert into MayBanThe values(1,1000000000,0,'bd')
+insert into MayBanThe values(2,1000000000,0,'bd')
+go
+create table ChiTietTheXeMayBan
+(
+MaThe int foreign key (MaThe) references TheXE(MaThe),
+MaMay int foreign key (MaMay) references MayBanThe(MaMay),
+primary key(mathe,mamay),
+)
+go
+insert into ChiTietTheXeMayBan values(4,1)
+insert into ChiTietTheXeMayBan values(5,1)
+insert into ChiTietTheXeMayBan values(6,1)
+insert into ChiTietTheXeMayBan values(7,2)
+insert into ChiTietTheXeMayBan values(8,2)
+insert into ChiTietTheXeMayBan values(9,2)
+go
+select top (1) * from ChiTietTheXeMayBan where mamay=1;
 go
 create table NhanVien
 (

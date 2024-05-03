@@ -120,8 +120,7 @@ DiaChi nvarchar(1000)
 )
 go
 insert into ChiNhanh values('bd',N'Bình Dương',N'Thủ Dầu Một')
-
-
+insert into ChiNhanh values('bd2',N'Bình Dương',N'Thủ Dầu Một')
 go
 create table MayBanThe
 (
@@ -149,6 +148,22 @@ insert into ChiTietTheXeMayBan values(8,2)
 insert into ChiTietTheXeMayBan values(9,2)
 go
 select top (1) * from ChiTietTheXeMayBan where mamay=1;
+go
+create view view_1 as
+select cn.MaCN, cn.TenChiNhanh,cn.DiaChi, COUNT(*) as soxe from  ChiNhanh cn, ThietBiMuonXe t
+where  cn.MaCN=t.MaCN and t.TrangThai=1
+group by cn.MaCN, cn.TenChiNhanh,cn.DiaChi
+go
+select  * from view_1
+go
+create view view_2 as
+select cn.MaCN, cn.TenChiNhanh,cn.DiaChi,cn.soxe, COUNT(m.MaMay) as SoThe from view_1 cn, ChiTietTheXeMayBan c,MayBanThe m 
+where m.MaCN=cn.MaCN and c.MaMay=m.MaMay
+group by cn.MaCN, cn.TenChiNhanh,cn.DiaChi,cn.soxe
+go
+select * from view_2
+
+
 go
 create table NhanVien
 (

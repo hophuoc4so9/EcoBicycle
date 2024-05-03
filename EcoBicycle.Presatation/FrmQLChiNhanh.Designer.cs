@@ -35,9 +35,6 @@ namespace EcoBicycle.Presatation
             this.txtChiNhanh = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dgvChuyenNganh = new System.Windows.Forms.DataGridView();
-            this.MaCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenChiNhanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnthem = new DevExpress.XtraEditors.SimpleButton();
             this.btnxoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -46,6 +43,11 @@ namespace EcoBicycle.Presatation
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MaCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenChiNhanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soxe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenNganh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -65,7 +67,7 @@ namespace EcoBicycle.Presatation
             // 
             this.txtChiNhanh.Location = new System.Drawing.Point(283, 30);
             this.txtChiNhanh.Name = "txtChiNhanh";
-            this.txtChiNhanh.Size = new System.Drawing.Size(249, 29);
+            this.txtChiNhanh.Size = new System.Drawing.Size(249, 26);
             this.txtChiNhanh.TabIndex = 6;
             // 
             // errorProvider1
@@ -78,39 +80,17 @@ namespace EcoBicycle.Presatation
             this.dgvChuyenNganh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaCN,
             this.TenChiNhanh,
-            this.DiaChi});
-            this.dgvChuyenNganh.Location = new System.Drawing.Point(100, 277);
+            this.DiaChi,
+            this.soxe,
+            this.SoThe});
+            this.dgvChuyenNganh.Location = new System.Drawing.Point(51, 277);
             this.dgvChuyenNganh.Name = "dgvChuyenNganh";
             this.dgvChuyenNganh.RowHeadersWidth = 62;
             this.dgvChuyenNganh.RowTemplate.Height = 28;
-            this.dgvChuyenNganh.Size = new System.Drawing.Size(1058, 150);
+            this.dgvChuyenNganh.Size = new System.Drawing.Size(1191, 150);
             this.dgvChuyenNganh.TabIndex = 7;
             this.dgvChuyenNganh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChuyenNganh_CellContentClick);
             this.dgvChuyenNganh.SelectionChanged += new System.EventHandler(this.dgvChuyenNganh_SelectionChanged);
-            // 
-            // MaCN
-            // 
-            this.MaCN.DataPropertyName = "MaCN";
-            this.MaCN.HeaderText = "Mã Chi Nhánh";
-            this.MaCN.MinimumWidth = 8;
-            this.MaCN.Name = "MaCN";
-            this.MaCN.Width = 150;
-            // 
-            // TenChiNhanh
-            // 
-            this.TenChiNhanh.DataPropertyName = "TenChiNhanh";
-            this.TenChiNhanh.HeaderText = "Tên Chi Nhánh";
-            this.TenChiNhanh.MinimumWidth = 8;
-            this.TenChiNhanh.Name = "TenChiNhanh";
-            this.TenChiNhanh.Width = 150;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.MinimumWidth = 8;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.Width = 150;
             // 
             // btnthem
             // 
@@ -179,6 +159,46 @@ namespace EcoBicycle.Presatation
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // MaCN
+            // 
+            this.MaCN.DataPropertyName = "MaCN";
+            this.MaCN.HeaderText = "Mã Chi Nhánh";
+            this.MaCN.MinimumWidth = 8;
+            this.MaCN.Name = "MaCN";
+            this.MaCN.Width = 150;
+            // 
+            // TenChiNhanh
+            // 
+            this.TenChiNhanh.DataPropertyName = "TenChiNhanh";
+            this.TenChiNhanh.HeaderText = "Tên Chi Nhánh";
+            this.TenChiNhanh.MinimumWidth = 8;
+            this.TenChiNhanh.Name = "TenChiNhanh";
+            this.TenChiNhanh.Width = 150;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.MinimumWidth = 8;
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Width = 150;
+            // 
+            // soxe
+            // 
+            this.soxe.DataPropertyName = "soxe";
+            this.soxe.HeaderText = "Số xe";
+            this.soxe.MinimumWidth = 8;
+            this.soxe.Name = "soxe";
+            this.soxe.Width = 150;
+            // 
+            // SoThe
+            // 
+            this.SoThe.DataPropertyName = "SoThe";
+            this.SoThe.HeaderText = "Số thẻ";
+            this.SoThe.MinimumWidth = 8;
+            this.SoThe.Name = "SoThe";
+            this.SoThe.Width = 150;
+            // 
             // FrmQLChiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -213,13 +233,15 @@ namespace EcoBicycle.Presatation
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.SimpleButton btnxoa;
         private DevExpress.XtraEditors.SimpleButton btnthem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenChiNhanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenCN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenChiNhanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soxe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
     }
 }

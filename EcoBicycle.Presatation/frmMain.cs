@@ -35,5 +35,10 @@ namespace EcoBicycle.Presatation
         {
             this.IsMdiContainer = true;
         }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

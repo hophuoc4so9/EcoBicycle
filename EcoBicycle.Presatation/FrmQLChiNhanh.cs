@@ -75,6 +75,8 @@ namespace EcoBicycle.Presatation
         private void FrmQLChuyenNganh_Load(object sender, EventArgs e)
         {
             dgvChuyenNganh.DataSource = Ctr.laydsChiNhanh();
+           
+            
 
         }
 

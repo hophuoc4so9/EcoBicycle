@@ -9,18 +9,23 @@ namespace EcoBicycle.DataAccess
 {
     public class ChiNhanhDL
     {
-        DataTable cn;
+        DataTable cn,cndaydu;
         DataHelper dt = DataHelper.GetInstance();
         public ChiNhanhDL()
         {
             cn = dt.FillDataTable("select * from ChiNhanh");
+            cndaydu = dt.FillDataTable("select * from view_2");
         }
         public DataTable LayChiNhanh()
         {
             cn = dt.FillDataTable("select * from ChiNhanh");
             return cn;
         }
-       
+        public DataTable LayChiNhanhDayDu()
+        {
+            cndaydu = dt.FillDataTable("select * from view_2");
+            return cndaydu;
+        }
         public bool themMoiThemChiNhanh(string macn,String tencn,string dc)
         {
             try

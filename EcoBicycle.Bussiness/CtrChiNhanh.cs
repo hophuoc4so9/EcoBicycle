@@ -26,6 +26,10 @@ namespace EcoBicycle.Bussiness
         {
             return cn.LayChiNhanh();    
         }
+        public DataTable LayChiNhanhDayDu()
+        {
+            return cn.LayChiNhanhDayDu();
+        }    
         public bool suaChiNhanh(String tencn, String macn,string dc)
         {
 

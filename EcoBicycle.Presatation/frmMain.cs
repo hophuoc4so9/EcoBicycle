@@ -39,7 +39,14 @@ namespace EcoBicycle.Presatation
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmXemThongKeXeDap f = (frmXemThongKeXeDap)this.MdiChildren.FirstOrDefault(k => k is frmXemThongKeXeDap);
+            if (f == null)
+            {
+                f = new frmXemThongKeXeDap();
+                f.MdiParent = this;
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
+            }
         }
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -65,6 +72,28 @@ namespace EcoBicycle.Presatation
                 f.WindowState = FormWindowState.Maximized;
                 f.Show();
             }
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmQLXe f = (frmQLXe)this.MdiChildren.FirstOrDefault(k => k is frmQLXe);
+            if (f == null)
+            {
+                f = new frmQLXe();
+                f.MdiParent = this;
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

@@ -17,7 +17,7 @@ namespace EcoBicycle.Presatation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmXemThongKeXeDap());
+            Application.Run(new FrmQlNhanVien());
         }
     }
 }

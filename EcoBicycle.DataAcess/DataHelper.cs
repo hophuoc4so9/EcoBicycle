@@ -14,7 +14,7 @@ namespace EcoBicycle.DataAccess
         DataSet ds = new DataSet();
         static string ChuoiKetNoi;
         SqlConnection con;
-        
+        int manhanvien;
        
             private DataHelper()
         {
@@ -124,6 +124,20 @@ namespace EcoBicycle.DataAccess
                 for (int j = 0; j < field_GiaTri.Length; j ++)
                 {
                     dv[i][j] = field_GiaTri[j ];
+                    //   dv[i][1] = field_GiaTri[j + 1];
+                }
+            }
+        }
+        public void UpdateRowTableDungThuTuCot2(DataTable dt, string dieukien, params object[] field_GiaTri)
+        {
+            DataView dv = new DataView(dt);
+            dv.RowFilter = dieukien;
+
+            for (int i = 0; i < dv.ToTable().Rows.Count; i++)
+            {
+                for (int j = 0; j < field_GiaTri.Length; j++)
+                {
+                  if(i!=0)  dv[i][j] = field_GiaTri[j];
                     //   dv[i][1] = field_GiaTri[j + 1];
                 }
             }

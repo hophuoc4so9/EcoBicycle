@@ -173,8 +173,19 @@ insert into ChiTietTheXeMayBan values(9,2)
 go
 select top (1) * from ChiTietTheXeMayBan where mamay=1;
 
+go
+create table LoaiNhanVien
+(
+LoaiNV int identity(1,1) primary key,
+tenLoaiNV nvarchar(20)
+)
+go
 
-
+insert into LoaiNhanVien values(N'Quản lý')
+insert into LoaiNhanVien values(N'Sửa chữa')
+insert into LoaiNhanVien values(N'Nhân viên')
+go
+select * from LoaiNhanVien
 go
 create table NhanVien
 (
@@ -184,7 +195,7 @@ GioiTinh bit,
 NgaySinh date,
 SDT varchar(10),
 DiaChi nvarchar(100),
-LoaiNV nvarchar(20),
+LoaiNV int foreign key (LoaiNV) references LoaiNhanVien(LoaiNV),
 Luong money,
 username varchar(100)not null unique,
 pass varchar(100) not null,
@@ -310,6 +321,3 @@ go
 select * from View_DoanhThu
 
 
-
-
-\

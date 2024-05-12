@@ -51,6 +51,7 @@
                   <Group Name="Chart3_CategoryGroup">
                     <GroupExpressions>
                       <GroupExpression>=Fields!thang.Value</GroupExpression>
+                      <GroupExpression>=Fields!nam.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
@@ -58,14 +59,24 @@
                       <Value>=Fields!thang.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!nam.Value</Label>
+                  <Label>=Fields!thang.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Doanhthu</Label>
+                  <Group Name="Chart3_SeriesGroup">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!nam.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!nam.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!nam.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
@@ -360,7 +371,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Chart Title</Caption>
+                <Caption>Biểu đồ doanh thu xe đạo</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>

@@ -42,7 +42,8 @@ namespace EcoBicycle.Presatation
                 }
 
             }
-                
+            dgvChuyenNganh.DataSource = Ctr.LayChiNhanhDayDu();
+
 
         }
 
@@ -69,12 +70,13 @@ namespace EcoBicycle.Presatation
                     MessageBox.Show("Thêm thất bại");
                 ;
 
-            }    
+            }
+            dgvChuyenNganh.DataSource = Ctr.LayChiNhanhDayDu();
         }
 
         private void FrmQLChuyenNganh_Load(object sender, EventArgs e)
         {
-            dgvChuyenNganh.DataSource = Ctr.laydsChiNhanh();
+            dgvChuyenNganh.DataSource = Ctr.LayChiNhanhDayDu();
            
             
 
@@ -111,6 +113,7 @@ namespace EcoBicycle.Presatation
                 ;
 
             }
+            dgvChuyenNganh.DataSource = Ctr.LayChiNhanhDayDu();
         }
 
         private void btnthem_Click_1(object sender, EventArgs e)

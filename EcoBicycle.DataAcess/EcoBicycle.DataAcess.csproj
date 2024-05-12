@@ -45,11 +45,14 @@
     <Compile Include="ChiNhanhDL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DataHelper.cs" />
+    <Compile Include="LoaiXeDL.cs" />
     <Compile Include="MayBanTheDL.cs" />
     <Compile Include="NhanvienDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoaiTheDL.cs" />
     <Compile Include="TheXeDL.cs" />
+    <Compile Include="XeDL.cs" />
+    <Compile Include="XemThongKeXeDaoDL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

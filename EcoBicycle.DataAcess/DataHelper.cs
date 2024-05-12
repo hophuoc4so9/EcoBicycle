@@ -164,7 +164,7 @@ namespace EcoBicycle.DataAccess
         {
             int data = 0;
 
-            
+            con.Open();
                
 
                 SqlCommand command = new SqlCommand(query, con);
@@ -185,8 +185,8 @@ namespace EcoBicycle.DataAccess
 
                 data = command.ExecuteNonQuery();
 
-              
 
+            con.Close();
             return data;
         }
 

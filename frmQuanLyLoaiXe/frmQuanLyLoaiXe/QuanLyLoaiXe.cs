@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EcoBicycle.Presatation
+namespace frmQuanLyLoaiXe
 {
-    public partial class frmQLLoaiXecs : Form
+    public partial class QuanLyLoaiXe : Form
     {
-        public frmQLLoaiXecs()
+        public QuanLyLoaiXe()
         {
             InitializeComponent();
         }

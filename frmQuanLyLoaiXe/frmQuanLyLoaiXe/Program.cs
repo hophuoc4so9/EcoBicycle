@@ -1,11 +1,10 @@
-﻿using QuanLyLoaiXe;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EcoBicycle.Presatation
+namespace frmQuanLyLoaiXe
 {
     internal static class Program
     {
@@ -17,7 +16,7 @@ namespace EcoBicycle.Presatation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmXemThongKeXeDap());
+            Application.Run(new Form1());
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EcoBicycle.Presatation
 {
-    public partial class frmXemThongKe : Form
+    public partial class frmDKMuonXe : Form
     {
-        public frmXemThongKe()
+        public frmDKMuonXe()
         {
             InitializeComponent();
         }

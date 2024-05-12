@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyLoaiXe;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,31 @@ namespace EcoBicycle.Presatation
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmQuanLyLoaiXe f = (frmQuanLyLoaiXe)this.MdiChildren.FirstOrDefault(k => k is frmQuanLyLoaiXe);
+            if (f == null)
+            {
+                f = new frmQuanLyLoaiXe();
+                f.MdiParent = this;
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
+            }
+
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmQLChiNhanh f = (FrmQLChiNhanh)this.MdiChildren.FirstOrDefault(k => k is FrmQLChiNhanh);
+            if (f == null)
+            {
+                f = new FrmQLChiNhanh();
+                f.MdiParent = this;
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
+            }
         }
     }
 }

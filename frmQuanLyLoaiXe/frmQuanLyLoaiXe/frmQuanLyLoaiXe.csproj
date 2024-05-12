@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1898C12-1C23-4E89-BB6E-1E448153CA80}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>EcoBicycle.Bussiness</RootNamespace>
-    <AssemblyName>EcoBicycle.Bussiness</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ProjectGuid>{8E7AEE45-CB4F-475C-BD0C-0157B381BF97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>frmQuanLyLoaiXe</RootNamespace>
+    <AssemblyName>frmQuanLyLoaiXe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,17 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CtrChiNhanh.cs" />
-    <Compile Include="ctrDangKy.cs" />
-    <Compile Include="CtrDangNhap.cs" />
-    <Compile Include="ctrHoanTraThe.cs" />
-    <Compile Include="ctrMainKH.cs" />
-    <Compile Include="ctrQLLoaiXe.cs" />
-    <Compile Include="ctrQLXe.cs" />
-    <Compile Include="ctrXemThongKeXeDap.cs" />
-    <Compile Include="infoLoginKH.cs" />
-    <Compile Include="infoLoginNV.cs" />
-    <Compile Include="infoMayBanThe.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,7 +62,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,12 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EcoBicycle.DataAcess\EcoBicycle.DataAcess.csproj">
-      <Project>{37775e9e-6fa8-4434-bdf8-ed472c605a96}</Project>
-      <Name>EcoBicycle.DataAcess</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

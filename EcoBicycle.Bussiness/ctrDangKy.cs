@@ -21,7 +21,7 @@ namespace EcoBicycle.Bussiness
         {
             return TheXe.LayTheXE();
         }
-        public Boolean DangkyThe(int MaMay, DataRow dr)
+        public int DangkyThe(int MaMay, DataRow dr)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace EcoBicycle.Bussiness
             }
             catch (Exception ex)
             {
-                return false;
+                return -1;
             }
 
         }

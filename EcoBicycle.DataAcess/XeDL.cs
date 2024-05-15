@@ -61,6 +61,30 @@ namespace EcoBicycle.DataAcess
                     false;
             }
         }
+        public bool PhanBoXe(int soluong, string macn1,string macn2)
+        {
+
+            try
+            {
+                DataTable db22 = dt.FillDataTable("select top(" + soluong + ") * from viewxe_1  where MaCN ='" + macn1 + "'");
+                if(db22.Rows.Count < soluong)
+                {
+                    return
+                 false;
+                }    
+                foreach(DataRow drr in db22.Rows)
+                {
+                    dt.ExecuteNonQuery("exec usp_suaThongTinXe " + drr["maxe"] + "," + drr["Maloai"]  + "," + drr["matt"]  + ", N'" + macn2 + "';");
+                }    
+           
+                return true;
+            }
+            catch (Exception e)
+            {
+                return
+                    false;
+            }
+        }
         public bool xoaXe(int Maxe)
         {
             try

@@ -29,7 +29,7 @@ namespace EcoBicycle.Bussiness
                 dr["MaThe"] = mathe;
                 dr["MatKhau"] = 111111;
                 dr["MaloaiThe"] = 0;
-
+                
                 return theXe.thayDoiThongTin(mathe, dr);
             }
             catch (Exception ex)
@@ -37,6 +37,28 @@ namespace EcoBicycle.Bussiness
                 return false;
             }
 
+        }
+        public Boolean NapTien(int mathe,int soDu)
+        {
+            try
+            {
+                DataRow dr = theXe.LayTheXE().NewRow();
+                dr["MaThe"] = mathe;
+          var t = infoLoginKH.SoDu + soDu;
+                dr["SoDu"] = t;
+                
+
+                return theXe.napTien(mathe, dr);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+        public void capNhatThe(string mathe, string mamay)
+        {
+            theXe.capNhatThe(mathe, mamay);
         }
         public Boolean checksodu(double sodu,int mamay)
         {

@@ -25,10 +25,10 @@ namespace EcoBicycle.Bussiness
                 infoLoginNV.SDT = user[0]["SDT"].ToString();
                 infoLoginNV.DiaChi = user[0]["DiaChi"].ToString();
                 infoLoginNV.LoaiNV = user[0]["LoaiNV"].ToString();
-                infoLoginNV.Luong = (double) user[0]["Luong"];
-                infoLoginNV.NgaySinh = (DateTime)user[0]["NgaySinh"];
-                infoLoginNV.username = user[0]["MaNV"].ToString();
-                infoLoginNV.pass = user[0]["MaNV"].ToString();
+                infoLoginNV.Luong = double.Parse (user[0]["Luong"].ToString());
+            if(user[0]["NgaySinh"]!= DBNull.Value)     infoLoginNV.NgaySinh = DateTime.Parse( user[0]["NgaySinh"].ToString());
+                infoLoginNV.username = user[0]["username"].ToString();
+                infoLoginNV.pass = user[0]["pass"].ToString();
                 return 1;
                 }
             user= theXe.TimTheXE(userName, password);
@@ -50,6 +50,21 @@ namespace EcoBicycle.Bussiness
 
             return 0;
             }
+        public void logouNV()
+        {
+
+            infoLoginNV.MaNV = -1;
+                infoLoginNV.HoTen = "";
+                infoLoginNV.SDT = "";
+            infoLoginNV.DiaChi = "";
+            infoLoginNV.LoaiNV = "";
+            infoLoginNV.Luong = 0;
+           
+                infoLoginNV.username = "";
+            infoLoginNV.pass = "";
+
+
+        }
         }
 
 }

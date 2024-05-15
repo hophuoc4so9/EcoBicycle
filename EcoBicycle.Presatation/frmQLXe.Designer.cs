@@ -50,7 +50,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(445, 150);
+            this.btnUpdate.Location = new System.Drawing.Point(367, 150);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(84, 65);
@@ -82,10 +82,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(771, 150);
+            this.btnDelete.Location = new System.Drawing.Point(565, 150);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(84, 65);
+            this.btnDelete.Size = new System.Drawing.Size(151, 65);
             this.btnDelete.TabIndex = 52;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;

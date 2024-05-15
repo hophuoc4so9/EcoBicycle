@@ -33,7 +33,7 @@ namespace EcoBicycle.Presatation
         { dt  = ctr.layThongKeXeDap();
             var s = dt;
             reportViewer1.LocalReport.DataSources.Clear();
-            var reportDataSource1 = new ReportDataSource("DataSet1", dt);
+            var reportDataSource1 = new ReportDataSource("DataSet2", dt);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "EcoBicycle.Presatation.Report1.rdlc";
             this.reportViewer1.RefreshReport();

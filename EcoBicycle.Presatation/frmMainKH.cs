@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 using EcoBicycle.Bussiness;
+using DevExpress.Office.Drawing;
 
 namespace EcoBicycle.Presatation
 {
@@ -20,7 +21,7 @@ namespace EcoBicycle.Presatation
         {
             InitializeComponent();
         }
-
+        
         private void frmMainKH_Load(object sender, EventArgs e)
         {
             comboBox1.DataSource = ctr.LayMayBanThe();
@@ -95,11 +96,12 @@ namespace EcoBicycle.Presatation
                
                 if (ctr.checksodu(infoLoginKH.SoDu, int.Parse(comboBox1.Text)) ==false  && infoLoginKH.MaloaiThe==1)
                 {
-                    MessageBox.Show("hiện tại không thể hoàn trả thẻ");
+                    MessageBox.Show("hiện tại không thể hoàn trả thẻ do máy không có đủ tiền");
                     return;
                 }
                 if (ctr.Thaydoithongtin(infoLoginKH.MaThe))
                 {
+                    ctr.capNhatThe(infoLoginKH.MaThe.ToString(), comboBox1.Text);
                     MessageBox.Show("Hoàn trả thẻ thành công");
                     ctr.logout();
                     frmMainKH_Load(this, null);
@@ -119,5 +121,14 @@ namespace EcoBicycle.Presatation
          
      
        }
+
+        private void btnNapTien_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            var f = new frmNapTien();
+     
+            f.Show();
+        }
     }
 }

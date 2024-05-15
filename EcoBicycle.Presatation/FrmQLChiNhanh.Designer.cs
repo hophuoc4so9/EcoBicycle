@@ -35,19 +35,21 @@ namespace EcoBicycle.Presatation
             this.txtChiNhanh = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dgvChuyenNganh = new System.Windows.Forms.DataGridView();
-            this.btnthem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnxoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTenCN = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.MaCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenChiNhanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soxe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTenCN = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnxoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnthem = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenNganh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -92,73 +94,6 @@ namespace EcoBicycle.Presatation
             this.dgvChuyenNganh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChuyenNganh_CellContentClick);
             this.dgvChuyenNganh.SelectionChanged += new System.EventHandler(this.dgvChuyenNganh_SelectionChanged);
             // 
-            // btnthem
-            // 
-            this.btnthem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.ImageOptions.Image")));
-            this.btnthem.Location = new System.Drawing.Point(161, 182);
-            this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(260, 68);
-            this.btnthem.TabIndex = 8;
-            this.btnthem.Text = "Thêm";
-            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
-            // 
-            // btnxoa
-            // 
-            this.btnxoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.ImageOptions.Image")));
-            this.btnxoa.Location = new System.Drawing.Point(509, 182);
-            this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(260, 68);
-            this.btnxoa.TabIndex = 9;
-            this.btnxoa.Text = "Xóa";
-            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(898, 182);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(260, 68);
-            this.btnSua.TabIndex = 10;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // txtTenCN
-            // 
-            this.txtTenCN.Location = new System.Drawing.Point(779, 30);
-            this.txtTenCN.Name = "txtTenCN";
-            this.txtTenCN.Size = new System.Drawing.Size(249, 26);
-            this.txtTenCN.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(637, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Tên chi nhánh";
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(283, 91);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(745, 71);
-            this.txtDiaChi.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(141, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Địa chỉ";
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
             // MaCN
             // 
             this.MaCN.DataPropertyName = "MaCN";
@@ -199,11 +134,102 @@ namespace EcoBicycle.Presatation
             this.SoThe.Name = "SoThe";
             this.SoThe.Width = 150;
             // 
+            // txtTenCN
+            // 
+            this.txtTenCN.Location = new System.Drawing.Point(779, 30);
+            this.txtTenCN.Name = "txtTenCN";
+            this.txtTenCN.Size = new System.Drawing.Size(249, 26);
+            this.txtTenCN.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(637, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Tên chi nhánh";
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(283, 91);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(745, 71);
+            this.txtDiaChi.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(141, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Địa chỉ";
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(849, 182);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 68);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Phân bổ xe";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1063, 181);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(179, 68);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "Phân bổ thẻ xe";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Location = new System.Drawing.Point(598, 181);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(167, 68);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnxoa
+            // 
+            this.btnxoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.ImageOptions.Image")));
+            this.btnxoa.Location = new System.Drawing.Point(328, 182);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(195, 68);
+            this.btnxoa.TabIndex = 9;
+            this.btnxoa.Text = "Xóa";
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
+            // 
+            // btnthem
+            // 
+            this.btnthem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.ImageOptions.Image")));
+            this.btnthem.Location = new System.Drawing.Point(67, 182);
+            this.btnthem.Name = "btnthem";
+            this.btnthem.Size = new System.Drawing.Size(172, 68);
+            this.btnthem.TabIndex = 8;
+            this.btnthem.Text = "Thêm";
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
             // FrmQLChiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1320, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTenCN);
@@ -243,5 +269,7 @@ namespace EcoBicycle.Presatation
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn soxe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

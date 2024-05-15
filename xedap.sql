@@ -17,7 +17,7 @@ TenThe nvarchar(50)
 )
 go
 insert into LoaiThe values(0,N'Chưa kích hoạt')
-insert into LoaiThe values(1,N'Thẻ trả trườc')
+insert into LoaiThe values(1,N'Thẻ trả trước')
 insert into LoaiThe values(2,N'Thẻ trả sau')
 go
 create table TheXE
@@ -34,6 +34,8 @@ SDT varchar(11),
 --ngaydangky date ,
 )
 
+go
+select thexe.*,TenThe from thexe, loaithe where thexe.maloaithe=loaithe.maloaithe
 go
 
 insert into TheXE values(0,111111,null,null,100000000,1,N'Phước',1,'0349146401')
@@ -62,6 +64,7 @@ insert into NguoiDung values(N'Phước',1,'0349146401',1)
 insert into NguoiDung values(N'Phước',1,'0349146401',2)
 insert into NguoiDung values(N'Phước',1,'0349146401',3)*/
 go
+select * from thexe
 go
 create table LoaiXe
 (
@@ -154,8 +157,14 @@ SoTheConlai int default 0,
 MaCN varchar(10) foreign key (macn) references ChiNhanh(macn)
 )
 go
+
+go
 insert into MayBanThe values(1,1000000000,0,'bd')
 insert into MayBanThe values(2,1000000000,0,'bd')
+insert into MayBanThe values(3,1000000000,0,'bd')
+insert into MayBanThe values(4,1000000000,0,'bd2')
+insert into MayBanThe values(5,1000000000,0,'bd2')
+insert into MayBanThe values(6,1000000000,0,'bd2')
 go
 create table ChiTietTheXeMayBan
 (
@@ -170,6 +179,8 @@ insert into ChiTietTheXeMayBan values(6,1)
 insert into ChiTietTheXeMayBan values(7,2)
 insert into ChiTietTheXeMayBan values(8,2)
 insert into ChiTietTheXeMayBan values(9,2)
+go
+select * from ChiTietTheXeMayBan
 go
 select top (1) * from ChiTietTheXeMayBan where mamay=1;
 
@@ -320,4 +331,28 @@ group by month(ThoiGianKetThuc), year(ThoiGianKetThuc)
 go
 select * from View_DoanhThu
 
+go
+go
+create view View_DoanhThu_2 as 
+select month(ThoiGianKetThuc) as thang, year(ThoiGianKetThuc) as nam, (CONVERT(VARCHAR(10), month(ThoiGianKetThuc))  +'/'+ CONVERT(VARCHAR(10), year(ThoiGianKetThuc))  ) as N'Tháng'  , sum( datediff(hour,thoigianbatdau,ThoiGianKetThuc)* dongia) as Doanhthu
+from chitietmuonxe
+group by month(ThoiGianKetThuc), year(ThoiGianKetThuc),(CONVERT(VARCHAR(10), month(ThoiGianKetThuc))  +'/'+ CONVERT(VARCHAR(10), year(ThoiGianKetThuc))  )
+go
+select * from View_DoanhThu_2
 
+
+
+go
+select * from xe
+select * from view_1
+go
+
+select * from MayBanThe
+where MayBanThe.MaCn='bd'
+go
+select * from MayBanThe where  MayBanThe.MaCn='bd2' 
+/*
+update ChiTietTheXeMayBan
+set ChiTietTheXeMayBan.MaMay=
+from MayBanThe,ChiTietTheXeMayBan
+where ChiTietTheXeMayBan.MaMay =MayBanThe.MaMay and MayBanThe.MaCn='bd' and mathe=4*/

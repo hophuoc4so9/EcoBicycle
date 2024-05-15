@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtXuatSu = new System.Windows.Forms.TextBox();
             this.txtHangXe = new System.Windows.Forms.TextBox();
@@ -64,16 +62,12 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtXuatSu);
             this.groupBox1.Controls.Add(this.txtHangXe);
@@ -98,20 +92,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(374, 203);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 31);
-            this.numericUpDown2.TabIndex = 18;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(173, 203);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 31);
-            this.numericUpDown1.TabIndex = 17;
             // 
             // pictureBox1
             // 
@@ -411,8 +391,6 @@
             this.Load += new System.EventHandler(this.frmQuanLyLoaiXe_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -452,8 +430,6 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }

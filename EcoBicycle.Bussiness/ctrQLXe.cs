@@ -14,9 +14,18 @@ namespace EcoBicycle.Bussiness
         ChiNhanhDL chinhanh = new ChiNhanhDL();
         XeDL xedl = new XeDL();
         LoaiXeDL LoaiXe = new LoaiXeDL();
+        TheXeDL x = new TheXeDL();
         public DataTable laydsxe()
         {
             return xedl.laydsXe();
+        }
+        public bool PhanBoXe(int soluong, string macn1, string macn2)
+        {
+            return xedl.PhanBoXe(soluong, macn1, macn2);    
+        }
+        public bool PhanThe(int soluong, string macn1, string macn2)
+        {
+            return x.PhanThe(soluong, macn1, macn2);
         }
         public DataTable laydsCN()
         {

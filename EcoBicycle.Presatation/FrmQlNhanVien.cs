@@ -81,7 +81,7 @@ namespace EcoBicycle.Presatation
             var tam = ctr.LayLaoiNhanvien();
             comboboxTenLoaiNV.DisplayMember = "tenLoaiNV";
             comboboxTenLoaiNV.ValueMember = "LoaiNV";
-
+            comboboxTenLoaiNV.Enabled = false;
 
 
         }

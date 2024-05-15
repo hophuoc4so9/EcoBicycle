@@ -120,5 +120,21 @@ namespace EcoBicycle.Presatation
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPhanBo f = new frmPhanBo();
+            f.trangthai = 1;
+            f.Show();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmPhanBo f = new frmPhanBo();
+            f.trangthai = 2;
+            f.Show();
+          
+        }
     }
 }

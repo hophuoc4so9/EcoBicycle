@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numericUpDownTien = new System.Windows.Forms.TextBox();
             this.txtMaThe = new System.Windows.Forms.TextBox();
             this.labelMathe = new System.Windows.Forms.Label();
             this.txtSTK = new System.Windows.Forms.TextBox();
@@ -69,6 +70,7 @@
             this.panel1.BackColor = System.Drawing.Color.SpringGreen;
             this.panel1.BackgroundImage = global::EcoBicycle.Presatation.Properties.Resources.bicycle;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.numericUpDownTien);
             this.panel1.Controls.Add(this.txtMaThe);
             this.panel1.Controls.Add(this.labelMathe);
             this.panel1.Controls.Add(this.txtSTK);
@@ -93,6 +95,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // numericUpDownTien
+            // 
+            this.numericUpDownTien.Location = new System.Drawing.Point(227, 360);
+            this.numericUpDownTien.MaxLength = 10;
+            this.numericUpDownTien.Name = "numericUpDownTien";
+            this.numericUpDownTien.Size = new System.Drawing.Size(344, 26);
+            this.numericUpDownTien.TabIndex = 23;
+            this.numericUpDownTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // txtMaThe
             // 
@@ -146,7 +158,7 @@
             // labelNganHang
             // 
             this.labelNganHang.AutoSize = true;
-            this.labelNganHang.Location = new System.Drawing.Point(90, 259);
+            this.labelNganHang.Location = new System.Drawing.Point(90, 262);
             this.labelNganHang.Name = "labelNganHang";
             this.labelNganHang.Size = new System.Drawing.Size(119, 20);
             this.labelNganHang.TabIndex = 17;
@@ -208,7 +220,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(494, 392);
+            this.button2.Location = new System.Drawing.Point(490, 402);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 36);
             this.button2.TabIndex = 11;
@@ -355,5 +367,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider6;
         private System.Windows.Forms.TextBox txtMaThe;
         private System.Windows.Forms.Label labelMathe;
+        private System.Windows.Forms.TextBox numericUpDownTien;
     }
 }

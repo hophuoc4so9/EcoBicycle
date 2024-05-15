@@ -1,4 +1,5 @@
-﻿using QuanLyLoaiXe;
+﻿using EcoBicycle.Bussiness;
+using QuanLyLoaiXe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,28 +14,87 @@ namespace EcoBicycle.Presatation
 {
     public partial class frmMain : Form
     {
+        CtrDangNhap c = new CtrDangNhap();
         public frmMain()
         {
             InitializeComponent();
         }
-
+        
         private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
-            FrmDangNhap f = (FrmDangNhap)this.MdiChildren.FirstOrDefault(k => k is FrmDangNhap);
-            if (f == null)
+            if (infoLoginNV.MaNV == -1)
             {
-                f = new FrmDangNhap();
-                f.MdiParent = this;
-                f.WindowState = FormWindowState.Maximized;
-                f.Show();
+                FrmDangNhap f = (FrmDangNhap)this.MdiChildren.FirstOrDefault(k => k is FrmDangNhap);
+                if (f == null)
+                {
+                    f = new FrmDangNhap();
+                    f.TopLevel = false;
+                    this.Controls.Add(f);
+                 
+                    f.MdiParent = this;
+                    f.WindowState = FormWindowState.Maximized;
+                    
+                    f.Show();
+                    
+                }
+              
+                
+            }
+            else
+            {
+
+                c.logouNV();
+                loadData();
+               
+            }
+
+            if (infoLoginNV.MaNV == -1)
+            {
+                btnDangNhap.Caption = "Đăng nhập";
+                ribbonPageGroup3.Visible = false;
+                ribbonPageGroup5.Visible = false;
+            }
+            else
+            {
+                btnDangNhap.Caption = "Đăng xuất";
+                ribbonPageGroup3.Visible = true;
+                ribbonPageGroup5.Visible = true;
             }
 
         }
-
+        public void loadData()
+        {
+            if (infoLoginNV.MaNV == -1)
+            {
+                btnDangNhap.Caption = "Đăng nhập";
+                ribbonPageGroup3.Visible = false;
+                ribbonPageGroup5.Visible = false;
+            }
+            else
+            {
+                btnDangNhap.Caption = "Đăng xuất";
+                ribbonPageGroup3.Visible = true;
+                ribbonPageGroup5.Visible = true;
+            }
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.IsMdiContainer = true;
+
+            if (infoLoginNV.MaNV == -1)
+            {
+                btnDangNhap.Caption = "Đăng nhập";
+                ribbonPageGroup3.Visible = false;
+                ribbonPageGroup5.Visible = false;
+            }
+            else
+            {
+                btnDangNhap.Caption = "Đăng xuất";
+                ribbonPageGroup3.Visible = true;
+                ribbonPageGroup5.Visible = true;
+            }
+
+
         }
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -93,7 +153,26 @@ namespace EcoBicycle.Presatation
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            frmXemThongTin f = (frmXemThongTin)this.MdiChildren.FirstOrDefault(k => k is frmXemThongTin);
+            if (f == null)
+            {
+                f = new frmXemThongTin();
+                f.MdiParent = this;
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
+            }
+        }
 
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmQLTheXe f = (frmQLTheXe)this.MdiChildren.FirstOrDefault(k => k is frmQLTheXe);
+            if (f == null)
+            {
+                f = new frmQLTheXe();
+                f.MdiParent = this;
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
+            }
         }
     }
 }

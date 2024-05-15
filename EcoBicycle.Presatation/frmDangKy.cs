@@ -24,6 +24,8 @@ namespace EcoBicycle.Presatation
 
         private void frmDangKy_Load(object sender, EventArgs e)
         {
+
+           
             this.BackColor = Color.PaleGreen;
             cmbLoaiThe.DataSource = ctr.LayLoaiTheXE();
             cmbLoaiThe.DisplayMember = "TenThe";
@@ -34,6 +36,7 @@ namespace EcoBicycle.Presatation
                 labelMathe.Visible = false;
                 txtMaThe.Visible = false;
                 button1.Text = "Tiếp tục";
+                numericUpDownTien.Visible = true;
             }   
             if(trangthai ==1)
             {   cmbLoaiThe.Enabled = false;
@@ -48,6 +51,12 @@ namespace EcoBicycle.Presatation
                 txtSDT.Text=infoLoginKH.SDT.ToString();
                 DataRow[] dr = ctr.LayLoaiTheXE().Select("MaloaiThe  = " + infoLoginKH.MaloaiThe);
                 cmbLoaiThe.SelectedIndex = cmbLoaiThe.FindString( dr[0]["TenThe"].ToString());
+               
+                if (cmbLoaiThe.Text.ToString() == "Thẻ trả trước")
+                { numericUpDownTien.ReadOnly = true;
+                    numericUpDownTien.Visible = true;
+                    numericUpDownTien.Text = infoLoginKH.SoDu.ToString();
+                }
             }    
         }
 
@@ -64,25 +73,28 @@ namespace EcoBicycle.Presatation
                 dr["MatKhau"] =txtPass.Text;
                 if (cmbLoaiThe.Text == "Thẻ trả trườc")
                 {
-                    dr["SoDu"] = 100000000;
+                    dr["SoDu"] = int.Parse(numericUpDownTien.Text);
+
                 }
                 if (cmbLoaiThe.Text == "Thẻ trả sau")
                 {
                     dr["MaNganHang"] = cmbNganHang.Text;
                     dr["TenNganHang"] =txtSTK.Text;
-                   
+                  
+
+
                 }
                 string dk = "TenThe = '" + cmbLoaiThe.Text +"'";
                 DataRow[] tam = ctr.LayLoaiTheXE().Select(dk);
                 dr["MaloaiThe"] = tam[0]["MaloaiThe"];
                 dr["GioiTinh"] = (radioNam.Checked) ? true : false;
                 dr["SDT"] =txtSDT.Text;
-                
 
-                if (ctr.DangkyThe(MaMay, dr) == true)
+                int kq = ctr.DangkyThe(MaMay, dr);
+                if (kq != -1)
                 {
                     
-                    MessageBox.Show("Đăng ký thẻ thành công");
+                    MessageBox.Show("Đăng ký thẻ thành công \nMã thẻ của bạn là: " + kq );
                 }
                 else MessageBox.Show("Đăng ký thẻ thất bại");
                     
@@ -131,6 +143,7 @@ namespace EcoBicycle.Presatation
                 labelSTK.Visible = false;
                 cmbNganHang.Visible = false;
                 txtSTK.Visible = false;
+                numericUpDownTien.Visible = true;
             }
             if (cmbLoaiThe.Text == "Thẻ trả sau")
             {
@@ -140,6 +153,7 @@ namespace EcoBicycle.Presatation
                 labelSTK.Visible = true;
                 cmbNganHang.Visible = true;
                 txtSTK.Visible = true;
+                numericUpDownTien.Visible = false;
             }
 
         }
@@ -154,7 +168,11 @@ namespace EcoBicycle.Presatation
 
         }
         private bool validData()
-        {
+        {   if( int.Parse(numericUpDownTien.Text) <1000000)
+            {
+                return false;
+
+            }    
             errorProvider1.SetError(txtPass, ((txtPass.Text.Length < 6) ? "Hãy nhập Pass gồm 6 số" : ""));
             errorProvider2.SetError(txtSDT, ((txtSDT.Text.Length <10) ? "Hãy nhập đủ số điện thoại" : ""));
             errorProvider3.SetError(radioNu, ((!(radioNam.Checked || radioNu.Checked)) ? "Hãy chọn giới tính" : ""));
@@ -178,6 +196,11 @@ namespace EcoBicycle.Presatation
         }
 
         private void labelMathe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

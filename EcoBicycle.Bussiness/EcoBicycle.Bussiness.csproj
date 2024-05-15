@@ -57,6 +57,7 @@
     <Compile Include="ctrMainKH.cs" />
     <Compile Include="ctrQLLoaiXe.cs" />
     <Compile Include="CtrQLNhanVien.cs" />
+    <Compile Include="ctrQLTheXe.cs" />
     <Compile Include="ctrQLXe.cs" />
     <Compile Include="ctrXemThongKeXeDap.cs" />
     <Compile Include="infoLoginKH.cs" />

@@ -14,7 +14,7 @@ namespace EcoBicycle.DataAccess
         DataTable db;
         public DataTable layThongKeXeDap()
         {
-            db = dt.FillDataTable("select * from View_DoanhThu\r\n");
+            db = dt.FillDataTable("select * from View_DoanhThu_2");
             return db;
         }
      }

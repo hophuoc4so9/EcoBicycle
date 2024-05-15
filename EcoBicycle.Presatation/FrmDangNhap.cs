@@ -53,9 +53,11 @@ namespace EcoBicycle.Presatation
                 else
                 if (t == 1)
                 {
+                    var f = (frmMain)this.ParentForm;
+                    f.loadData();
                     this.Close();
-                    var f = new frmMain();
-                    f.Show();
+                    
+
 
                 }
                 else

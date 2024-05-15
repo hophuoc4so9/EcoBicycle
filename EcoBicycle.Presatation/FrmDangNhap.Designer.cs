@@ -86,20 +86,20 @@ namespace EcoBicycle.Presatation
             // 
             // btnThoatDangNhap
             // 
-            this.btnThoatDangNhap.Location = new System.Drawing.Point(758, 498);
-            this.btnThoatDangNhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnThoatDangNhap.Location = new System.Drawing.Point(1137, 747);
+            this.btnThoatDangNhap.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnThoatDangNhap.Name = "btnThoatDangNhap";
-            this.btnThoatDangNhap.Size = new System.Drawing.Size(283, 108);
+            this.btnThoatDangNhap.Size = new System.Drawing.Size(424, 162);
             this.btnThoatDangNhap.TabIndex = 5;
             this.btnThoatDangNhap.Text = "Thoát";
             this.btnThoatDangNhap.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // BtnDangNhapdn
             // 
-            this.BtnDangNhapdn.Location = new System.Drawing.Point(243, 485);
-            this.BtnDangNhapdn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnDangNhapdn.Location = new System.Drawing.Point(364, 728);
+            this.BtnDangNhapdn.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.BtnDangNhapdn.Name = "BtnDangNhapdn";
-            this.BtnDangNhapdn.Size = new System.Drawing.Size(258, 122);
+            this.BtnDangNhapdn.Size = new System.Drawing.Size(387, 183);
             this.BtnDangNhapdn.TabIndex = 3;
             this.BtnDangNhapdn.Text = "Đăng nhập";
             this.BtnDangNhapdn.Click += new System.EventHandler(this.simpleButton1_Click);

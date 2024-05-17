@@ -28,6 +28,7 @@ namespace EcoBicycle.Presatation
                 if (f == null)
                 {
                     f = new FrmDangNhap();
+                    FrmDangNhap.trangthai = 1;
                     f.TopLevel = false;
                     this.Controls.Add(f);
                  
@@ -66,12 +67,14 @@ namespace EcoBicycle.Presatation
         {
             if (infoLoginNV.MaNV == -1)
             {
+                barButtonItem3.Enabled = false;
                 btnDangNhap.Caption = "Đăng nhập";
                 ribbonPageGroup3.Visible = false;
                 ribbonPageGroup5.Visible = false;
             }
             else
             {
+                barButtonItem3.Enabled = true;
                 btnDangNhap.Caption = "Đăng xuất";
                 ribbonPageGroup3.Visible = true;
                 ribbonPageGroup5.Visible = true;
@@ -83,12 +86,14 @@ namespace EcoBicycle.Presatation
 
             if (infoLoginNV.MaNV == -1)
             {
+                barButtonItem3.Enabled = false;
                 btnDangNhap.Caption = "Đăng nhập";
                 ribbonPageGroup3.Visible = false;
                 ribbonPageGroup5.Visible = false;
             }
             else
             {
+                barButtonItem3.Enabled = true;
                 btnDangNhap.Caption = "Đăng xuất";
                 ribbonPageGroup3.Visible = true;
                 ribbonPageGroup5.Visible = true;

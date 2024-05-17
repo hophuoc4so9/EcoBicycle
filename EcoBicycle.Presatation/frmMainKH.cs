@@ -30,12 +30,15 @@ namespace EcoBicycle.Presatation
             panel1.AutoSize = true;
             if(infoLoginKH.MaloaiThe <=0)
             {
+                btnDangNhap.Visible = true;
                 btnHoanTraThe.Visible = false;
                 btnNapTien.Visible = false;
                 btnXemThongTin.Visible = false;
             }    
             else
             {
+                btnDangNhap.Visible = false;
+                
                 btnHoanTraThe.Visible = true;
                 btnXemThongTin.Visible= true;
                 btnNapTien.Visible = (infoLoginKH.MaloaiThe == 1) ?true:false;  

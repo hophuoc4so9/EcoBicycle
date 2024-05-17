@@ -26,6 +26,8 @@ namespace EcoBicycle.Presatation
 
         private void FrmDangNhap_Load(object sender, EventArgs e)
         {
+            this.BtnDangNhapdn.Visible = false;
+            this.btnThoatDangNhap.Visible= false;
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -35,6 +37,10 @@ namespace EcoBicycle.Presatation
             {
                 var f = new frmMainKH();
                 f.ShowDialog();
+            }    
+            else
+            {
+                this.Close();
             }    
                 
         }

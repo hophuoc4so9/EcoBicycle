@@ -42,6 +42,9 @@ insert into TheXE values(0,111111,null,null,100000000,1,N'Phước',1,'034914640
 insert into TheXE values(1,111111,null,null,100000000,1,N'Phước',1,'0349146401')
 insert into TheXE values(2,111111,null,null,100000000,1,N'Phước',1,'0349146401')
 insert into TheXE values(3,111111,null,null,100000000,1,N'Phước',1,'0349146401')
+select * from thexe
+--insert into TheXE values(333,111111,N'123',N'123',0,N'Phước',1,'0349146401')
+
 insert into TheXE values(4,111111,null,null,null,0,null,null,null)
 insert into TheXE values(6,111111,null,null,null,0,null,null,null)
 insert into TheXE values(7,111111,null,null,null,0,null,null,null)
@@ -117,22 +120,21 @@ create table ChiTietMuonxe
 MaThe int foreign key (MaThe) references TheXE(MaThe),
 MaXe int   foreign key (maxe) references xe(maxe),
 
-ThoiGianBatDau date,
-ThoiGianKetThuc date,
+ThoiGianBatDau dateTIME,
+ThoiGianKetThuc dateTIME,
 DonGia money,
 primary key(MaThe,maxe,ThoiGianBatDau),
 )
 go
-insert into ChiTietMuonxe values(0,1,'2024-3-1','2024-5-1',3000)
-insert into ChiTietMuonxe values(0,1,'2024-3-2','2024-4-1',3000)
+select * from ChiTietMuonxe
+go
+update ChiTietMuonxe set thoigianketthuc='5/19/2024 8:29:41 PM'  where MaThe=0 and MaXe=3 and thoigianbatdau='5/19/2024 8:1:41 PM';
+go
+select * from ChiTietMuonxe where thoigianketthuc is null and MaThe=0
+insert into ChiTietMuonxe values(0,3,'5/19/2024 8:1:41 PM',NULL,3000)
+insert into ChiTietMuonxe values(0,3,'5/19/2024 8:29:41 PM','5/19/2024 8:58:41 PM',3000)
+go
 
-insert into ChiTietMuonxe values(0,1,'2024-2-1','2024-3-1',3000)
-insert into ChiTietMuonxe values(0,1,'2023-1-1','2023-2-1',3000)
-
-insert into ChiTietMuonxe values(0,1,'2024-1-1','2024-2-1',3000)
-
-insert into ChiTietMuonxe values(0,1,'2024-2-2','2024-4-1',3000)
-insert into ChiTietMuonxe values(0,1,'2024-2-3','2024-2-1',3000)
 
 go
 select maxe,mathe,ThoiGianBatDau, DATEDIFF(HOUR,ThoiGianBatDau ,  ThoiGianKetThuc)*DonGia as tongtien from ChiTietMuonxe
@@ -223,7 +225,7 @@ MaXE int,
 -- int foreign key (maxe) references xe(maxe),
 TrangThai bit
 )
-select * from ChiNhanh
+select * from ThietBiMuonXe
 go
 insert into ThietBiMuonXe values(1,'bd',1,0)
 insert into ThietBiMuonXe values(2,'bd',0,0)
@@ -233,6 +235,7 @@ insert into ThietBiMuonXe values(5,'bd',0,0)
 insert into ThietBiMuonXe values(6,'bd',0,0)
 insert into ThietBiMuonXe values(7,'bd2',1,0)
 insert into ThietBiMuonXe values(8,'bd2',0,0)
+-- thiết bị mượn
 go
 insert into ChiNhanh values(N'bd213',N'Bình dương',N'Tân uyên')
 go
@@ -242,7 +245,9 @@ insert into ThietBiMuonXe values(11,'bd213',0,0)
 insert into ThietBiMuonXe values(12,'bd213',0,0)
 select * from ThietBiMuonXe
 go
-
+update ThietBiMuonXe
+set maxe=0,trangthai=0
+where maxe=0
 	
 
 go
@@ -257,7 +262,7 @@ select xe.*,a.MaCN
 from xe left join (select t.MaCN,t.MaXE from chinhanh,thietbimuonxe t where t.MaCN=ChiNhanh.MaCN) as a
 on xe.MaXe=a.MaXE
 go
-select * from LoaiXe
+select * from viewxe_1
 go
 create view viewxe_2 as
 select MaXe,LoaiXe.TenXe,TrangThaiXe.TenTrangThai,MaCN,TrangThaiXe.Matt,LoaiXe.MaLoai
@@ -289,6 +294,7 @@ begin
 		
 end
 end
+select * from viewxe_2
 GO
 go
 create proc usp_suaThongTinXe( @maxe int, @maloai int , @matt int ,@MaCN varchar(10) )
@@ -351,6 +357,8 @@ select * from MayBanThe
 where MayBanThe.MaCn='bd'
 go
 select * from MayBanThe where  MayBanThe.MaCn='bd2' 
+select *
+from ChiTietTheXeMayBan
 /*
 update ChiTietTheXeMayBan
 set ChiTietTheXeMayBan.MaMay=

@@ -50,6 +50,7 @@ namespace EcoBicycle.Presatation
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnxoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnthem = new DevExpress.XtraEditors.SimpleButton();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenNganh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -89,7 +90,7 @@ namespace EcoBicycle.Presatation
             this.dgvChuyenNganh.Name = "dgvChuyenNganh";
             this.dgvChuyenNganh.RowHeadersWidth = 62;
             this.dgvChuyenNganh.RowTemplate.Height = 28;
-            this.dgvChuyenNganh.Size = new System.Drawing.Size(1191, 150);
+            this.dgvChuyenNganh.Size = new System.Drawing.Size(1237, 290);
             this.dgvChuyenNganh.TabIndex = 7;
             this.dgvChuyenNganh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChuyenNganh_CellContentClick);
             this.dgvChuyenNganh.SelectionChanged += new System.EventHandler(this.dgvChuyenNganh_SelectionChanged);
@@ -173,7 +174,7 @@ namespace EcoBicycle.Presatation
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(849, 182);
+            this.button1.Location = new System.Drawing.Point(926, 181);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 68);
@@ -184,7 +185,7 @@ namespace EcoBicycle.Presatation
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1063, 181);
+            this.button2.Location = new System.Drawing.Point(1129, 181);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 68);
@@ -196,9 +197,10 @@ namespace EcoBicycle.Presatation
             // btnSua
             // 
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(598, 181);
+            this.btnSua.Location = new System.Drawing.Point(497, 183);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(167, 68);
+            this.btnSua.Size = new System.Drawing.Size(195, 67);
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -206,9 +208,10 @@ namespace EcoBicycle.Presatation
             // btnxoa
             // 
             this.btnxoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.ImageOptions.Image")));
-            this.btnxoa.Location = new System.Drawing.Point(328, 182);
+            this.btnxoa.Location = new System.Drawing.Point(299, 177);
+            this.btnxoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(195, 68);
+            this.btnxoa.Size = new System.Drawing.Size(161, 72);
             this.btnxoa.TabIndex = 9;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
@@ -216,18 +219,31 @@ namespace EcoBicycle.Presatation
             // btnthem
             // 
             this.btnthem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.ImageOptions.Image")));
-            this.btnthem.Location = new System.Drawing.Point(67, 182);
+            this.btnthem.Location = new System.Drawing.Point(61, 177);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(172, 68);
+            this.btnthem.Size = new System.Drawing.Size(203, 72);
             this.btnthem.TabIndex = 8;
             this.btnthem.Text = "Thêm";
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(715, 182);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(179, 68);
+            this.button3.TabIndex = 62;
+            this.button3.Text = "Load data";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FrmQLChiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1320, 450);
+            this.ClientSize = new System.Drawing.Size(1334, 592);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDiaChi);
@@ -271,5 +287,6 @@ namespace EcoBicycle.Presatation
         private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

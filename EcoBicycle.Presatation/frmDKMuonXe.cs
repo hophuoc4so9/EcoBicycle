@@ -16,5 +16,10 @@ namespace EcoBicycle.Presatation
         {
             InitializeComponent();
         }
+
+        private void frmDKMuonXe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

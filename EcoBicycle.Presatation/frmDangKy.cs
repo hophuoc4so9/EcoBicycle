@@ -93,7 +93,8 @@ namespace EcoBicycle.Presatation
                 int kq = ctr.DangkyThe(MaMay, dr);
                 if (kq != -1)
                 {
-                    
+                    if (kq==-2) MessageBox.Show("Máy hiệm tại không đủ thẻ " );
+                    else
                     MessageBox.Show("Đăng ký thẻ thành công \nMã thẻ của bạn là: " + kq );
                 }
                 else MessageBox.Show("Đăng ký thẻ thất bại");

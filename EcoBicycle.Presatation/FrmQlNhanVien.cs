@@ -81,7 +81,7 @@ namespace EcoBicycle.Presatation
             var tam = ctr.LayLaoiNhanvien();
             comboboxTenLoaiNV.DisplayMember = "tenLoaiNV";
             comboboxTenLoaiNV.ValueMember = "LoaiNV";
-            comboboxTenLoaiNV.Enabled = false;
+       
 
 
         }
@@ -176,9 +176,9 @@ namespace EcoBicycle.Presatation
                 dlg.Filter = "Image Files(*.jdg;*.jpeg;*.gif;*.bmp;*.png)|*.jpg;*.jpeg;*.gif)";
                 if(dlg.ShowDialog() == DialogResult.OK)
                 {
-                    pHinhand.Image = new Bitmap(dlg.FileName);
+                 //   pHinhand.Image = new Bitmap(dlg.FileName);
               
-                    pHinhand.SizeMode = PictureBoxSizeMode.StretchImage;
+                //    pHinhand.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
         }

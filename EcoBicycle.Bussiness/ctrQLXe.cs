@@ -15,13 +15,33 @@ namespace EcoBicycle.Bussiness
         XeDL xedl = new XeDL();
         LoaiXeDL LoaiXe = new LoaiXeDL();
         TheXeDL x = new TheXeDL();
+        public DataTable chitiet(string mathe)
+        {
+
+
+            return xedl.chitiet(mathe);
+        }
+        public bool TraXe(string maxe, string maThe, string thoigianbatdau)
+        {
+           return xedl.TraXe(maxe,maThe,thoigianbatdau);
+
+
+        }
         public DataTable laydsxe()
         {
             return xedl.laydsXe();
         }
+        public DataTable laydsxe(string macn)
+        {
+            return xedl.laydsXe( macn);
+        }
         public bool PhanBoXe(int soluong, string macn1, string macn2)
         {
             return xedl.PhanBoXe(soluong, macn1, macn2);    
+        }
+        public bool PhanBoXe(string maxe, string macn1, string macn2)
+        {
+            return xedl.PhanBoXe(maxe, macn1, macn2);
         }
         public bool PhanThe(int soluong, string macn1, string macn2)
         {
@@ -56,5 +76,12 @@ namespace EcoBicycle.Bussiness
         {
             return xedl.SuaXe( maxe,  Maloai,  matrangthai,  macn);
         }
+        public bool MuonXe(string maxe, string maThe)
+        {
+            return xedl.MuonXe(maxe,maThe);
+        }
+
+
+
     }
 }

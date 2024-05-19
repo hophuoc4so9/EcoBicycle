@@ -68,7 +68,9 @@ namespace EcoBicycle.DataAcess
             try
             {
                 DataTable ChiTietTheXeMayBan = dt.FillDataTable("select * from ChiTietTheXeMayBan ");
+                if(dt.FillDataTable("select top (1) * from ChiTietTheXeMayBan where mamay=" + MaMay).Rows.Count==0) return -2;
                 DataRow dr1 = dt.FillDataTable("select top (1) * from ChiTietTheXeMayBan where mamay=" + MaMay).Rows[0];
+            
                 int mathe = int.Parse(dr1["MaThe"].ToString()) ;
                 String dk = "MaThe = '" + mathe + "'";
                 dr["MaThe"] = mathe;

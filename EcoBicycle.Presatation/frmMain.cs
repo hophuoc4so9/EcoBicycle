@@ -141,7 +141,14 @@ namespace EcoBicycle.Presatation
 
         private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            FrmQlNhanVien f = (FrmQlNhanVien)this.MdiChildren.FirstOrDefault(k => k is FrmQlNhanVien);
+            if (f == null)
+            {
+                f = new FrmQlNhanVien();
+                f.MdiParent = this;
+                f.WindowState = FormWindowState.Maximized;
+                f.Show();
+            }
         }
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

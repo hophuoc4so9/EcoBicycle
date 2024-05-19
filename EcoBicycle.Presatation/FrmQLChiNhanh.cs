@@ -124,6 +124,7 @@ namespace EcoBicycle.Presatation
         private void button1_Click(object sender, EventArgs e)
         {
             frmPhanBo f = new frmPhanBo();
+           f.Closed += (s, args) => dgvChuyenNganh.DataSource = Ctr.LayChiNhanhDayDu(); ;
             f.trangthai = 1;
             f.Show();
            
@@ -132,9 +133,15 @@ namespace EcoBicycle.Presatation
         private void button2_Click(object sender, EventArgs e)
         {
             frmPhanBo f = new frmPhanBo();
+            f.Closed += (s, args) => dgvChuyenNganh.DataSource = Ctr.LayChiNhanhDayDu(); ;
             f.trangthai = 2;
             f.Show();
           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgvChuyenNganh.DataSource = Ctr.LayChiNhanhDayDu();
         }
     }
 }

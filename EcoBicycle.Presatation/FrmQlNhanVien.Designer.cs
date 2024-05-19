@@ -59,10 +59,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.pHinhand = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHinhand)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -342,18 +340,6 @@
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // pHinhand
-            // 
-            this.pHinhand.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pHinhand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pHinhand.Location = new System.Drawing.Point(978, 41);
-            this.pHinhand.Name = "pHinhand";
-            this.pHinhand.Size = new System.Drawing.Size(163, 205);
-            this.pHinhand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pHinhand.TabIndex = 20;
-            this.pHinhand.TabStop = false;
-            this.pHinhand.Click += new System.EventHandler(this.pHinhand_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(665, 309);
@@ -381,7 +367,6 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pHinhand);
             this.Controls.Add(this.comboboxTenLoaiNV);
             this.Controls.Add(this.TxtPassword);
             this.Controls.Add(this.label9);
@@ -401,7 +386,6 @@
             this.Text = "FrmQlNhanVien";
             this.Load += new System.EventHandler(this.FrmQlNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHinhand)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,7 +424,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diachi;
-        private System.Windows.Forms.PictureBox pHinhand;
         private System.Windows.Forms.Button button1;
     }
 }

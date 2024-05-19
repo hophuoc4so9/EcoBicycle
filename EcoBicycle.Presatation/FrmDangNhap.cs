@@ -68,9 +68,20 @@ namespace EcoBicycle.Presatation
                 }
                 else
                 {
+                    if(trangthai!=3)
+                    {    
                     this.Close();
                     var f = new frmMainKH();
                     f.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                        var f = new frmMuonTraXe();
+                        frmMuonTraXe.trangthai = 2;
+                        f.Show();
+                    } 
+                        
                 }
             }
 

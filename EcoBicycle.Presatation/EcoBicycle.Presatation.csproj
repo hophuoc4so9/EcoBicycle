@@ -141,6 +141,12 @@
     <Compile Include="frmMainKH.Designer.cs">
       <DependentUpon>frmMainKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMuonTraXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMuonTraXe.Designer.cs">
+      <DependentUpon>frmMuonTraXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNapTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     </Compile>
     <Compile Include="frmPhanBo.Designer.cs">
       <DependentUpon>frmPhanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanboXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanboXe.Designer.cs">
+      <DependentUpon>frmPhanboXe.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmQLChiNhanh.cs">
       <SubType>Form</SubType>
@@ -230,11 +242,17 @@
     <EmbeddedResource Include="frmMainKH.resx">
       <DependentUpon>frmMainKH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMuonTraXe.resx">
+      <DependentUpon>frmMuonTraXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNapTien.resx">
       <DependentUpon>frmNapTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanBo.resx">
       <DependentUpon>frmPhanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanboXe.resx">
+      <DependentUpon>frmPhanboXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLChiNhanh.resx">
       <DependentUpon>FrmQLChiNhanh.cs</DependentUpon>

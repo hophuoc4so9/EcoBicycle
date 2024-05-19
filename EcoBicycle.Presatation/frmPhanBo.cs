@@ -43,7 +43,7 @@ namespace EcoBicycle.Presatation
             comboBox2.ValueMember = "MaCN";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             
 
